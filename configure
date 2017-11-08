@@ -1,0 +1,13 @@
+#!/bin/sh
+rm -rf live555
+rm pthread.h
+rm semaphore.h
+rm sched.h
+
+cd live555-linux/
+./genMakefiles linux
+make
+sudo make install
+cd ../
+
+echo 'proxyprotocol:Type make to build'
